@@ -1,7 +1,10 @@
-<%= form_tag '/top/login', method: :post do %>
+<h1>ログイン画面</h1>
+<%= form_tag '/top/login', method: :post, data: { turbo:false } do %>
     <%= label_tag :uid, 'ユーザーID' %>
     <%= text_field_tag :uid %></br>
     <%= label_tag :pass, 'パスワード' %>
     <%= password_field_tag :pass %></br>
-    <%= submit_tag '登録' %>
+    <%= submit_tag 'ログイン' %>
 <% end %>
+
+<%= link_to "登録に戻る", top_registration_path %>

@@ -1,0 +1,18 @@
+<% if @user&.errors&.any? %>
+    <div class="error_messages">
+        <% @user.errors.full_messages.each do |message| %>
+            <p><%= message %></p>
+        <% end %>
+    </div>
+<% end %>
+
+<h1>登録画面</h1>
+<%= form_tag '/top/registration', method: :post, data: { turbo:false } do %>
+    <%= label_tag :uid, 'ユーザーID' %>
+    <%= text_field_tag :uid %></br>
+    <%= label_tag :pass, 'パスワード' %>
+    <%= password_field_tag :pass %></br>
+    <%= submit_tag '登録' %>
+<% end %>
+
+<%= link_to "ログインはこちら", top_login_path %>

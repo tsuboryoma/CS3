@@ -18,5 +18,8 @@ module CS1
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.time_zone = 'Tokyo'
+    config.aactive_record.default_timezone = :local
+    config.i18n.default_locate = :ja
   end
 end

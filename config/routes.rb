@@ -5,6 +5,10 @@ Rails.application.routes.draw do
   # root "articles#index"
   get 'top/main'
   post 'top/login'
+  get 'top/login'
   root 'top#main'
   get 'top/logout'
+  post 'top/registration'
+  get 'top/registration'
+  
 end

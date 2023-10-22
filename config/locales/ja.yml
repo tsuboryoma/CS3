@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        uid: "ユーザーID"
+        pass: "パスワード"
+    errors:
+      models:
+        user:
+          attributes:
+            uid:
+              blank: "は必須です"
+              taken: "は既に使用されています"
+            pass:
+              blank: "は必須です"
+              too_short: "は%{count}文字以上で入力してください"
