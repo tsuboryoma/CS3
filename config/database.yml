@@ -22,7 +22,9 @@ test:
 
 production:
   <<: *default
-  #database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: test_render_i4fu
   username: test_render_i4fu_user
   password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
