@@ -20,6 +20,7 @@ module CS1
     # config.eager_load_paths << Rails.root.join("extras")
     config.time_zone = 'Tokyo'
     
-    config.i18n.default_locate = :ja
+    config.active_record.default_timezone = :local
+    config.i18n.default_locale = :ja
   end
 end
